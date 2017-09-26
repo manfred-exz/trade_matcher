@@ -1,0 +1,8 @@
+[package]
+name = "trade_client"
+version = "0.1.0"
+authors = ["manfred"]
+
+[dependencies]
+decimal = "*"
+zmq = "0.8"

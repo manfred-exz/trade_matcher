@@ -1,0 +1,11 @@
+[package]
+name = "trade_matcher"
+version = "0.1.0"
+authors = ["manfred"]
+
+[dependencies]
+serde_derive = "*"
+serde = "*"
+serde_json = "*"
+decimal = "*"
+zmq = "0.8"
