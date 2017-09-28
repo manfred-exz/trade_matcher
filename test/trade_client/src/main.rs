@@ -29,7 +29,7 @@ fn main() {
         })
     };
 
-    for request_nbr in 0..10 {
+    for request_nbr in 0..5 {
         println!("Sending Request {}...", request_nbr);
         req.id = request_nbr;
         requester.send(serde_json::to_string(&req).unwrap().as_bytes(), 0).unwrap();

@@ -1,18 +1,20 @@
+use super::decimal;
+
 pub type SecurityId = String;
 pub type Volume = u32;
-pub type Price = super::decimal::d128;
+pub type Price = decimal::d128;
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, Eq, Hash, Debug)]
 pub enum ExchangeId {
     SH, SZ, SHFE, ZCE, CFFEX, DCE
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Copy, Clone, Debug)]
 pub enum Direction {
     Buy, Sell
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, PartialEq, Eq, Hash, Debug)]
 pub struct SecurityUuid {
     pub exchange_id: ExchangeId,
     pub security_id: SecurityId
